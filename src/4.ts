@@ -15,9 +15,10 @@ class Person {
 }
 
 abstract class House {
+  protected door: boolean = false;
+  private tenants: Person[] = [];
+  
   constructor(private key: Key) {}
-  door: boolean = false;
-  tenants: Person[] = [];
 
   public abstract openDoor(key: Key): void;
 
